@@ -4,7 +4,7 @@ import Album from "./components/album";
 import Map from "./components/map";
 import Info from "./components/info";
 import { useRef, useState, useEffect } from "react";
-import Schedule from "./components/schedule";
+// import Schedule from "./components/schedule";
 import Contact from "./components/contact";
 import Invitation from "./components/invitation";
 
