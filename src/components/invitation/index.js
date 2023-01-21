@@ -35,7 +35,7 @@ const Invitation = ({ page = 1 }) => {
         }
         const location = urlParams.get("location") || "nha-trai";
         let img = await loadImage(
-          `images/invitation/${location}-page-${page}.png`
+          `images/invitation/${location}-page-${page}.jpeg`
         );
         var hRatio = canvas.width / img.width;
         var vRatio = canvas.height / img.height;
@@ -54,7 +54,7 @@ const Invitation = ({ page = 1 }) => {
           img.width * ratio,
           img.height * ratio
         );
-        if (page ==='2') {
+        if (page ==='99') {
           context.font = `${(img.width * ratio) / 20}px Send Flowers`;
           context.fillStyle = "#080852";
           const guest = urlParams.get("guest") || "Quý khách";
@@ -63,13 +63,13 @@ const Invitation = ({ page = 1 }) => {
             context.fillText(
               guest,
               (img.width * ratio) / 2,
-              (img.height * ratio) /10
+              (img.height * ratio) /9
             );
           } else {
             context.fillText(
               guest,
               (img.width * ratio) / 2,
-              (img.height * ratio) /10
+              (img.height * ratio) /9
             );
           }
         }

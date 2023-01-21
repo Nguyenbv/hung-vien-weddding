@@ -4,9 +4,10 @@ import Album from "./components/album";
 import Map from "./components/map";
 import Info from "./components/info";
 import { useRef, useState, useEffect } from "react";
-// import Schedule from "./components/schedule";
+import Schedule from "./components/schedule";
 import Contact from "./components/contact";
 import Invitation from "./components/invitation";
+import Congrats from './components/congrats';
 
 function App() {
   const fullPage = useRef();
@@ -15,7 +16,7 @@ function App() {
   const scheduleRef = useRef();
   const contactRef = useRef();
   const albumRef = useRef();
-
+  const congratsRef = useRef();
   const [page, setPage] = useState(0);
   const [showMenu, setShowMenu] = useState(false);
   const [showMusic, setShowMusic] = useState(false);
@@ -86,6 +87,9 @@ function App() {
       case "contact":
         contactRef.current.scrollIntoView({ behavior: "smooth" });
         break;
+      case "congrats":
+        congratsRef.current.scrollIntoView({ behavior: "smooth" });
+        break;
 
       default:
         break;
@@ -94,26 +98,29 @@ function App() {
   const soundCloudEmbed = `
   <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1340299825&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/nguyenhero" title="Nguyễn Văn Hoà" target="_blank" style="color: #cccccc; text-decoration: none;">Nguyễn Văn Hoà</a> · <a href="https://soundcloud.com/nguyenhero/sets/wedding" title="Wedding" target="_blank" style="color: #cccccc; text-decoration: none;">Wedding</a></div>
   `;
-  // const getInvitation = () => {
-  //   return '#'
-  //   // const urlParams = new URLSearchParams(window.location.search);
+  const getInvitation = () => {
+    return '#'
+    // const urlParams = new URLSearchParams(window.location.search);
 
-  //   // const location = urlParams.get("location") || "nha-trai";
-  //   // if (location === "nha-trai") {
-  //   //   return "https://docs.google.com/spreadsheets/d/1E0lB6k5ZEz9eMgpvg800APTsPcIFEsCsgy7pR6Zvuvk/edit?usp=sharing";
-  //   // }
-  //   // return "https://docs.google.com/spreadsheets/d/1q3O7FowRrVs8HH6Y5iB6m5cksB2-uE3ewfchHMS2x10/edit?usp=sharing";
-  // };
+    // const location = urlParams.get("location") || "nha-trai";
+    // if (location === "nha-trai") {
+    //   return "https://docs.google.com/spreadsheets/d/1E0lB6k5ZEz9eMgpvg800APTsPcIFEsCsgy7pR6Zvuvk/edit?usp=sharing";
+    // }
+    // return "https://docs.google.com/spreadsheets/d/1q3O7FowRrVs8HH6Y5iB6m5cksB2-uE3ewfchHMS2x10/edit?usp=sharing";
+  };
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const location = urlParams.get("location") || "nha-trai";
+
   return (
     <div className="App" ref={fullPage} onScroll={onScroll}>
-      {/* <a
-        // target={"_blank"}
+      <a
         href={getInvitation()}
         className="action-btn"
         rel="noreferrer"
       >
-       <img className='img-responsive' alt='qr' src='/images/points/qr.png' />
-      </a> */}
+        <img className='img-responsive' alt='qr' src='/images/points/qr.png' />
+      </a>
       <div className="menu">
         <div
           className={showMenu ? "menu-btn active" : "menu-btn"}
@@ -140,18 +147,33 @@ function App() {
             />
             <span>Album ảnh</span>
           </div>
-          {/* <div
+          {location === "nha-trai" ? null :
+            <div
+              className="item"
+              role="button"
+              aria-hidden="true"
+              onClick={(e) => goto("schedule")}
+            >
+              <img
+                alt="calendar"
+                src="https://img.icons8.com/color/48/ffffff/google-calendar--v1.png"
+              />
+              <span>Hành trình</span>
+            </div>
+          }
+
+          <div
             className="item"
             role="button"
             aria-hidden="true"
-            onClick={(e) => goto("schedule")}
+            onClick={(e) => goto("congrats")}
           >
             <img
               alt="calendar"
-              src="https://img.icons8.com/color/48/ffffff/google-calendar--v1.png"
+              src="https://img.icons8.com/fluency/2x/gift--v2.png"
             />
-            <span>Hành trình</span>
-          </div> */}
+            <span>Chúc phúc</span>
+          </div>
           <div
             className="item"
             role="button"
@@ -210,12 +232,14 @@ function App() {
         <div className="element page2" ref={homeRef}>
           <Invitation page="2" />
         </div>
-        {/* <div className="element">
+        {location === "nha-trai" ? null : <div className="element">
           <div className="block-tile" ref={scheduleRef}>
             Hành trình
           </div>
           <Schedule />
-        </div> */}
+        </div>}
+
+
         <div className="element " ref={contactRef}>
           <div className="block-tile"> Liên hệ</div>
           <Contact />
@@ -225,6 +249,12 @@ function App() {
             Địa chỉ{" "}
           </div>
           <Map />
+        </div>
+        <div className="element">
+          <div className="block-tile" ref={congratsRef}>
+            Chúc phúc
+          </div>
+          <Congrats />
         </div>
         <div className="element" ref={albumRef}>
           <div className="block-tile">Album ảnh</div>

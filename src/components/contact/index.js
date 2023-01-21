@@ -10,13 +10,13 @@ const Contact = () => {
             alt="chú rể"
             src="/images/info/nha-trai.png" />
           <div className="btn-link">
-            {/* <a href="https://www.facebook.com/nvh.neu" target="_blank"  rel="noreferrer" >
+            <a href="https://www.facebook.com/nvh.neu" target="_blank"  rel="noreferrer" >
               <img
                 alt="socical"
                 src="https://img.icons8.com/color/48/ffffff/facebook.png"
               />
-            </a> */}
-            <a href="tel:0869751666" target="_blank" rel="noreferrer" >
+            </a>
+            <a href="tel:0917804664" target="_blank" rel="noreferrer" >
               <img
                 alt="socical"
                 src="https://img.icons8.com/color/48/ffffff/apple-phone.png"
@@ -34,13 +34,13 @@ const Contact = () => {
             alt="cô dâu"
             src="/images/info/nha-gai.png" />
           <div className="btn-link">
-            {/* <a href="https://www.facebook.com/huonglt.hus7694" target="_blank"  rel="noreferrer" >
+            <a href="https://www.facebook.com/huonglt.hus7694" target="_blank"  rel="noreferrer" >
               <img
                 alt="socical"
                 src="https://img.icons8.com/color/48/ffffff/facebook.png"
               />
-            </a>{" "} */}
-            <a href="tel:0964776324" target="_blank" rel="noreferrer" >
+            </a>{" "}
+            <a href="tel:0886531183" target="_blank" rel="noreferrer" >
               <img
                 alt="socical"
                 src="https://img.icons8.com/color/48/ffffff/apple-phone.png"
