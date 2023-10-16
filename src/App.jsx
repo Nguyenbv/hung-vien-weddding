@@ -118,12 +118,12 @@ function App() {
     <div className="App" ref={fullPage} onScroll={onScroll}>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{location === 'nha-trai' ? "Lễ thành hôn | 30/01/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"}</title>
-        <meta property="og:title" content={location === 'nha-trai' ? "Lễ thành hôn | 30/01/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
-        <meta property="og:site_name" content={location === 'nha-trai' ? "Lễ thành hôn | 30/01/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
-        <meta property="og:site_name" content={location === 'nha-trai' ? "Lễ thành hôn | 30/01/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
-        <meta name="twitter:site" content={location === 'nha-trai' ? "Lễ thành hôn | 30/01/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
-        <meta name="twitter:title" content={location === 'nha-trai' ? "Lễ thành hôn | 30/01/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
+        <title>{location === 'nha-trai' ? "Lễ thành hôn | 22/10/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"}</title>
+        <meta property="og:title" content={location === 'nha-trai' ? "Lễ thành hôn | 22/10/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
+        <meta property="og:site_name" content={location === 'nha-trai' ? "Lễ thành hôn | 22/10/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
+        <meta property="og:site_name" content={location === 'nha-trai' ? "Lễ thành hôn | 22/10/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
+        <meta name="twitter:site" content={location === 'nha-trai' ? "Lễ thành hôn | 22/10/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
+        <meta name="twitter:title" content={location === 'nha-trai' ? "Lễ thành hôn | 22/10/2023 | Dương ❤️ Hiền" : "Lễ vu quy | 29/01/2023 | Dương ❤️ Hiền"} />
       </Helmet>
       <a
         href={getInvitation()}
@@ -158,22 +158,7 @@ function App() {
             />
             <span>Album ảnh</span>
           </div>
-          {location === "nha-trai" ? null :
-            <div
-              className="item"
-              role="button"
-              aria-hidden="true"
-              onClick={(e) => goto("schedule")}
-            >
-              <img
-                alt="calendar"
-                src="https://img.icons8.com/color/48/ffffff/google-calendar--v1.png"
-              />
-              <span>Hành trình</span>
-            </div>
-          }
-
-          <div
+          {/* <div
             className="item"
             role="button"
             aria-hidden="true"
@@ -184,7 +169,7 @@ function App() {
               src="https://img.icons8.com/fluency/2x/gift--v2.png"
             />
             <span>Chúc phúc</span>
-          </div>
+          </div> */}
           <div
             className="item"
             role="button"
@@ -243,14 +228,6 @@ function App() {
         <div className="element page2" ref={homeRef}>
           <Invitation page="2" />
         </div>
-        {location === "nha-trai" ? null : <div className="element">
-          <div className="block-tile" ref={scheduleRef}>
-            Hành trình
-          </div>
-          <Schedule />
-        </div>}
-
-
         <div className="element " ref={contactRef}>
           <div className="block-tile"> Liên hệ</div>
           <Contact />
@@ -261,12 +238,12 @@ function App() {
           </div>
           <Map />
         </div>
-        <div className="element">
+        {/* <div className="element">
           <div className="block-tile" ref={congratsRef}>
             Chúc phúc
           </div>
           <Congrats />
-        </div>
+        </div> */}
         <div className="element" ref={albumRef}>
           <div className="block-tile">Album ảnh</div>
           <Album />

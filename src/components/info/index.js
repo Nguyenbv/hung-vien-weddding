@@ -18,11 +18,11 @@ const Info = ({ page }) => {
                     <div className={`block summary animate__animated animate__delay-1s ${effectItem}`}>
                         <div className="title-info">
                             <div>
-                                Dương
+                                Hưng
                                 <span className="and">&</span>
                             </div>
                             <div>
-                                Hiền
+                                Viên
                             </div>
                         </div>
                         <div className="sub-info">
@@ -41,7 +41,7 @@ const Info = ({ page }) => {
 
                         </div>
                         <div className="sub-info">
-                           Yên Sơn - Sơn Trung - Hương Sơn - Hà Tĩnh
+                           Yên Tập - Nhân Hoà - Mỹ Hào - Hưng Yên
                         </div>
                     </div>
                 )
@@ -56,7 +56,7 @@ const Info = ({ page }) => {
 
                         </div>
                         <div className="sub-info">
-                            Vọng Giang - Mai Đình - Hiệp Hòa - Bắc Giang
+                        Thanh Uyên - Tam Nông - Phú Thọ
                         </div>
                     </div>
                 )
@@ -89,7 +89,7 @@ const Info = ({ page }) => {
                 }
                 return (
                     < >
-                        <Countdown date={new Date("2023-01-30")} renderer={renderCountDown}>
+                        <Countdown date={new Date("2023-10-22")} renderer={renderCountDown}>
                             <Completionist />
                         </Countdown>
                     </>

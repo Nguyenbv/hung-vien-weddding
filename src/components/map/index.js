@@ -8,26 +8,25 @@ const FIXED_POINT = [
   {
     id: 1,
     name: "Nhà trai",
-    location: "Sơn Trung, Hương Sơn, Hà Tĩnh, Việt Nam",
-    latitude:  18.520807484801406,
-    longitude: 105.4330503215852,
+    location: "Yên Tập - Nhân Hòa - Mỹ Hào - Hưng Yên",
+    latitude: 20.951629,
+    longitude: 106.058693,
     code: "1",
     src: "images/points/point.png",
   },
   { 
     id: 2,
     name: "Nhà gái",
-    location: "Vọng Giang, Mai Đình, Hiệp Hòa, Bắc Giang",
-    latitude: 21.23062201049295,
-    longitude: 105.9581780095903,
+    location: "Thanh Uyên - Tam Nông - Phú Thọ",
+    latitude: 21.347704809509374,
+    longitude: 105.25173698146904,
     code: "2",
     src: "images/points/point.png",
   },
 ];
-
 const Map = () => {
   const mapEmbed = `
-  <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1921272.826248652!2d104.46844599123696!3d19.861690441197716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3139bf97e9a598c5%3A0x1800009af6b20ff1!2zU8ahbiBUcnVuZywgSMawxqFuZyBTxqFuLCBIw6AgVMSpbmgsIFZp4buHdCBOYW0!3m2!1d18.5235154!2d105.43902539999999!4m5!1s0x3135053101fb817b%3A0x3a40eda3318fb08!2zNlhINSs3QzQgVuG7jW5nIEdpYW5nLCBNYWkgxJBpzIBuaCwgSGnDqsyjcCBIb8yAYSwgQsSDzIFjIEdpYW5nLCBW4buNbmcgR2lhbmcsIEhp4buHcCBIw7JhLCBC4bqvYyBHaWFuZywgVmnhu4d0IE5hbQ!3m2!1d21.2281303!2d105.9586325!5e0!3m2!1svi!2s!4v1674140380841!5m2!1svi!2s" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d476197.22817045683!2d105.3390012839926!3d21.18060210788664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3135a479723df9f7%3A0x8144812ad46d49dd!2zWcOqbiBU4bqtcCwgTmjDom4gSMOyYSwgTeG7uSBIw6BvLCBIxrBuZyBZw6pu!3m2!1d20.949165999999998!2d106.0588744!4m5!1s0x31349024b24d106d%3A0xcfa119b268454ee6!2zVGhhbmggVXnDqm4sIFRhbSBOw7RuZywgUGjDuiBUaOG7jSwgVmnhu4d0IE5hbQ!3m2!1d21.3481421!2d105.24873699999999!5e0!3m2!1svi!2s!4v1697477051354!5m2!1svi!2s" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     `;
   return (
     <div>

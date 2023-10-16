@@ -10,7 +10,7 @@ const Contact = () => {
             alt="chú rể"
             src="/images/info/nha-trai.png" />
           <div className="btn-link">
-            <a href="https://www.facebook.com/xuanduong.hsht?mibextid=ZbWKwL" target="_blank"  rel="noreferrer" >
+            <a href="https://www.facebook.com/phieuduz" target="_blank"  rel="noreferrer" >
               <img
                 alt="socical"
                 src="https://img.icons8.com/color/48/ffffff/facebook.png"
@@ -34,7 +34,7 @@ const Contact = () => {
             alt="cô dâu"
             src="/images/info/nha-gai.png" />
           <div className="btn-link">
-            <a href="https://www.facebook.com/hien.ngo.100046?mibextid=ZbWKwL" target="_blank"  rel="noreferrer" >
+            <a href="https://www.facebook.com/dieu.gai.31" target="_blank"  rel="noreferrer" >
               <img
                 alt="socical"
                 src="https://img.icons8.com/color/48/ffffff/facebook.png"
